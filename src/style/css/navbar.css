@@ -1,0 +1,162 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  background: #fff;
+  padding: 0;
+  position: relative;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+.navbar #navToggler {
+  color: #000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+  font-size: 1.2rem;
+  display: none;
+}
+.navbar .navbarContent {
+  display: flex;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar .navbarContent .navbarLinks {
+  display: flex;
+  height: 100%;
+}
+.navbar .navbarContent .nav-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  color: #5c9738 !important;
+  margin: 0 1rem;
+}
+.navbar .navbarContent .nav-element:hover {
+  text-decoration: none;
+}
+.navbar .navbarContent .nav-element svg {
+  margin-left: 3px;
+}
+.navbar .navbarContent .dropdownBox {
+  min-width: fit-content;
+  height: auto;
+  background: #fff;
+  border: 2px solid #5c9738;
+  position: absolute;
+  top: 60px;
+  width: 12rem;
+  display: none;
+  z-index: 9999;
+}
+.navbar .navbarContent .dropdownBox a {
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  opacity: 0.75;
+  display: block;
+  color: #000;
+  font-weight: 100;
+}
+.navbar .navbarContent .dropdownBox a:hover {
+  color: #5c9738;
+  cursor: pointer;
+}
+.navbar .navbarContent .nav-element:hover .dropdownBox {
+  display: block;
+}
+.navbar .searchbar {
+  position: relative;
+  margin: 0 1rem;
+}
+.navbar .searchbar input {
+  width: inherit;
+  height: inherit;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  border-radius: 10rem;
+  min-width: 20rem;
+  height: 2.2rem;
+}
+.navbar .searchbar svg,
+.navbar .searchbar i {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 1rem;
+  cursor: pointer;
+}
+.navbar .appLogo {
+  height: 100%;
+  position: absolute;
+}
+.navbar .appLogo img {
+  height: 100%;
+  width: auto;
+  padding: 5px;
+}
+
+@media (max-width: 1200px) {
+  .navbar #navToggler {
+    display: block;
+  }
+  .navbar .navbarLinks {
+    flex-flow: column;
+    width: 100%;
+  }
+  .navbar .navbarContent {
+    flex-flow: column-reverse;
+    background: #fff;
+    height: auto !important;
+    z-index: 99;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    top: 60px;
+    width: 100%;
+    justify-content: initial;
+  }
+  .navbar .navbarContent .nav-element {
+    padding: 0.4rem 0;
+    padding-left: 0.8rem;
+    width: inherit;
+    justify-content: initial;
+    border-bottom: 1px solid #dee2e6;
+    margin: 0;
+  }
+  .navbar .navbarContent .customDropdown {
+    flex-flow: column;
+    width: 100%;
+  }
+  .navbar .navbarContent .customDropdown .dropdownBox {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .navbar .navbarContent .customDropdown div {
+    width: 100%;
+  }
+  .navbar .hiddenNavbar {
+    width: 0;
+  }
+  .navbar .searchbar {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .navbar .searchbar input {
+    height: 1.8rem;
+  }
+}
+@media (min-width: 1201px) {
+  .navbar {
+    display: block !important;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */

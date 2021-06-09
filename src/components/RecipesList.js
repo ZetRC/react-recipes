@@ -1,5 +1,5 @@
 import ModalContent from "./ModalContent"   
-import React,{ useState , useEffect} from "react";
+import React,{ useState } from "react";
 
 function RecipesList ({recipes}){
 
@@ -23,7 +23,7 @@ function RecipesList ({recipes}){
                             setModalData(recipe)
                             setBodyScroll("hidden")
                             }} >
-                                <img src={recipe.recipe.image} alt="" />
+                                <img src={recipe.recipe.image} alt="" onError={(e)=>{e.target.onerror = null; e.target.src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=367&q=80"}} />
                                 <h5>{recipe.recipe.label}</h5>
                                 <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti voluptatem quo sunt eum ipsum nesciunt cum neque molestias eius cumque distinctio asperiores aut ullam excepturi delectus, sapiente ut fuga. Ipsam vitae iusto sapiente natus adipisci accusantium dignissimos id ratione quos blanditiis dicta explicabo molestias possimus aliquam, temporibus, quae beatae assumenda!</h6>
                             </div>

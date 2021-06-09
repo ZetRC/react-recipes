@@ -7,17 +7,15 @@ const ModalContent = (({recipeData})=>{
         <>
             <div className="modalHeader">
                 <h2>{recipeData.recipe.label}</h2>
-                {/* <i class="fas fa-times"></i> */}
             </div>
             <div className="modalMainBox">
-                <img src={recipeData.recipe.image} alt="" />
+                <img src={recipeData.recipe.image} onError={(e)=>{e.target.onerror = null; e.target.src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=367&q=80"}} />
                 <div className="mealDataBox">
                     <h5>Nutritional Data</h5>
                     <h6>{`Calories : ${Math.floor(recipeData.recipe.calories)}`}</h6>
                     <h6>{`${nutritionalData.CHOLE.label} : ${Math.floor(nutritionalData.CHOLE.quantity)} ${nutritionalData.CHOLE.unit}` }</h6>
                     <h6>{`${nutritionalData.CHOCDF.label} : ${Math.floor(nutritionalData.CHOCDF.quantity)} ${nutritionalData.CHOCDF.unit}` }</h6>
                     <h6>{`${nutritionalData.FAT.label} : ${Math.floor(nutritionalData.FAT.quantity)} ${nutritionalData.FAT.unit}` }</h6>
-                    <h6>{`${nutritionalData.FATRN.label} : ${Math.floor(nutritionalData.FATRN.quantity)} ${nutritionalData.FATRN.unit}` }</h6>
                     <h6>{`${nutritionalData.PROCNT.label} : ${Math.floor(nutritionalData.PROCNT.quantity)} ${nutritionalData.PROCNT.unit}` }</h6>
                     <h6>{`${nutritionalData.NA.label} : ${Math.floor(nutritionalData.NA.quantity)} ${nutritionalData.NA.unit}` }</h6>
                     <h6>{`${nutritionalData.SUGAR.label} : ${Math.floor(nutritionalData.SUGAR.quantity)} ${nutritionalData.SUGAR.unit}` }</h6>

@@ -1,33 +1,33 @@
-import React, { useState,useEffect } from "react"
-import RecipesList from "./components/RecipesList"
-import Header from "./components/Header.js"
-import "./style/style.css"
+import React , {useState} from "react"
+import Home from "./components/Home"
+import Recipes from "./components/Recipes"
+import About from "./components/About"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import "./style/css/generalLayout.css"
+import { BrowserRouter as Router , Switch , Route} from "react-router-dom"
 
 function App() {
 
-  const app_key = "3fccc9350fb72556654b1ff0fa7ea3df"
-  const app_id = "30192847"
-
-  const [recipes,setRecipes] = useState(null)
-
-  useEffect (()=>{
-    getRecipes()
-  },[])
-
-  const getRecipes = function(){
-    fetch(`https://api.edamam.com/search?q=chicken&app_id=${app_id}&app_key=${app_key}`)
-    .then(res => res.json())
-    .then(data=>{
-      setRecipes(data.hits)
-      
-    })
-  }
+  const [ keyword , setKeyword ] = useState("vegan") 
+  
 
   return (
-    <div className="App">
-      <Header/>
-      {recipes && < RecipesList recipes={recipes} />}      
-    </div>
+    <>
+    <Router>
+          <Navbar changeSearch={keyword=>setKeyword(keyword)}/>
+        <Switch>
+              <Route path="/" exact component={Home}/>
+              <Route path="/recipes" >
+                  <Recipes keyword={keyword}/>
+              </Route>
+              <Route path="/recipes" component={Recipes}/>
+              <Route path="/about" component={About}>
+              </Route>
+        </Switch> 
+        <Footer/>
+    </Router>
+    </>
   );
 }
 

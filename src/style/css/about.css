@@ -1,0 +1,32 @@
+.about {
+  width: 100%;
+  max-width: 60rem;
+  padding: 0 1rem;
+  margin: 1.5rem auto;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.about h2 {
+  margin-bottom: 1rem;
+}
+.about h5 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+.about section {
+  margin: 2.5rem 0;
+}
+.about img {
+  width: 100%;
+  height: auto;
+}
+
+.toolsBox .tools-cont {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  text-align: start;
+}
+
+/*# sourceMappingURL=about.css.map */

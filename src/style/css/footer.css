@@ -1,0 +1,67 @@
+footer .footerTop {
+  width: 100%;
+  padding: 3rem 0;
+  background: #000;
+  position: relative;
+}
+footer .footerTop .socialMediaContent {
+  display: flex;
+  justify-content: center;
+}
+footer .footerTop .socialMediaContent i,
+footer .footerTop .socialMediaContent svg {
+  margin: 1rem;
+  color: #000;
+  background: #5c9738;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+footer .footerTop .socialMediaContent i:hover,
+footer .footerTop .socialMediaContent svg:hover {
+  color: #5c9738;
+  background: #000;
+  border: 1px solid;
+}
+footer .footerTop .relatedLinksContent {
+  display: flex;
+  color: #cccccc;
+  justify-content: center;
+}
+footer .footerTop .relatedLinksContent small {
+  border-right: 1px solid;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+footer .footerTop .relatedLinksContent small:hover {
+  color: #fff;
+}
+footer .footerTop .relatedLinksContent small:last-child {
+  border: none;
+}
+footer .footerTop .scroll-btn {
+  color: #fff !important;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  border: 1px solid;
+  font-size: 1.5rem;
+  padding: 2px;
+}
+footer .footerBottom {
+  background-color: #5c9738;
+  padding: 1rem 0;
+}
+footer .footerBottom h6,
+footer .footerBottom small {
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=footer.css.map */

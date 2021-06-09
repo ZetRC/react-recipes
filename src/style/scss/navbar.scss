@@ -1,0 +1,187 @@
+.navbar{
+    width:100%;
+    height: 60px;
+    align-items:center;
+    background:#fff;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+    
+    #navToggler{
+        color: #000;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1.5rem;
+        font-size: 1.2rem;
+        display:none ;
+    }
+
+    .navbarContent{
+        display: flex;
+        margin:0;
+        height: 100%;
+        align-items:center;
+        justify-content: flex-end;
+
+            .navbarLinks{
+                display: flex;
+                height: 100%;
+            }
+
+            .nav-element{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight:bold;
+                position: relative;
+                height: 100%;
+                text-decoration:none;
+                color: #5c9738 !important;
+                margin: 0 1rem;
+                &:hover{
+                    text-decoration:none ;
+                }
+                svg{
+                    margin-left: 3px;
+                }
+                
+            }
+
+            .dropdownBox{
+                min-width: fit-content;
+                height: auto;
+                background: #fff;
+                border: 2px solid #5c9738;
+                position: absolute;
+                top: 60px;
+                width: 12rem;
+                display: none;
+                z-index: +9999;
+                a{
+                    padding: .4rem 0 .4rem 1.2rem;
+                    opacity:.75;
+                    display: block;
+                    color: #000;
+                    font-weight: 100;
+                    &:hover{
+                        color: #5c9738;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .nav-element:hover .dropdownBox{
+                display: block;
+            }
+    }
+
+    .searchbar{
+        position: relative;
+        margin: 0 1rem;
+        input{
+            width:inherit;
+            height: inherit;
+            padding-left: 1rem;
+            padding-right: 2.5rem;
+            border-radius:10rem;
+            min-width: 20rem;
+            height: 2.2rem;
+        }
+
+        svg,
+        i{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 1rem;
+            cursor:pointer;
+        }
+    }
+
+    .appLogo{
+        height: 100%;
+        position: absolute;
+        img{
+            height: 100%;
+            width: auto;
+            padding: 5px;
+        }
+    }
+    
+}
+
+@media(max-width:1200px){
+
+    .navbar{
+
+        #navToggler{
+            display: block ;
+        }
+        .navbarLinks{
+            flex-flow: column;
+            width: 100%;
+        }
+    
+        .navbarContent{
+            flex-flow:column-reverse;
+            background: #fff;
+            height: auto !important;
+            z-index: +99;
+            transition:all .3s ease;
+            overflow: hidden;
+            position: relative;
+            top: 60px;
+            width: 100%;
+            justify-content: initial;
+            
+            .nav-element{
+                padding: .4rem 0;
+                padding-left: .8rem;
+                width: inherit;
+                justify-content: initial;
+                border-bottom:1px solid #dee2e6;
+                margin:0;
+            }
+
+            .customDropdown{
+                flex-flow:column;
+                width: 100%;
+                .dropdownBox{
+                    position:relative;
+                    bottom: 0;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #dee2e6;
+                }
+
+                div{
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .hiddenNavbar{
+            width: 0;
+
+        }
+
+        .searchbar{
+                margin-top: 1rem;
+                margin-bottom:.5rem;
+            input{
+                height: 1.8rem;
+            }
+        }
+
+    }
+
+    
+}
+
+@media(min-width:1201px){
+    .navbar{
+        display: block !important;
+    }
+}
